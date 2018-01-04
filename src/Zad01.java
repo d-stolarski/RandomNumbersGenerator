@@ -6,7 +6,7 @@ public class Zad01 {
 
     public static void main(String[] args) {
         TreeSet<Integer> set = new TreeSet<>();
-        initializeRandomValues(AMOUNT_OF_VALUES, set);
+        initializeRandomValues(set);
         System.out.println("Ilość elementów w zbiorze: " + set.size());
         System.out.println(set);
         System.out.println("Najmniejsza wartość w zbiorze: " + set.first());
@@ -15,7 +15,7 @@ public class Zad01 {
         showValuesBiggerThanAverage(set);
     }
 
-    public static void initializeRandomValues(int numberOfValues, TreeSet set){
+    public static void initializeRandomValues(TreeSet set){
         Random rand = new Random();
         for(int i = 0; i < AMOUNT_OF_VALUES; i++){
             int randVal = rand.nextInt(1001);
