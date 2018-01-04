@@ -15,7 +15,7 @@ public class Zad01 {
         showValuesBiggerThanAverage(set);
     }
 
-    public static void initializeRandomValues(TreeSet set){
+    private static void initializeRandomValues(TreeSet set){
         Random rand = new Random();
         for(int i = 0; i < AMOUNT_OF_VALUES; i++){
             int randVal = rand.nextInt(1001);
@@ -28,7 +28,7 @@ public class Zad01 {
         }
     }
 
-    public static int getAverageValue(TreeSet<Integer> set){
+    private static int getAverageValue(TreeSet<Integer> set){
         int sum = 0;
         for (Integer integer : set) {
             sum += integer;
@@ -37,7 +37,7 @@ public class Zad01 {
         return averageValue;
     }
 
-    public static void showValuesBiggerThanAverage(TreeSet<Integer> set){
+    private static void showValuesBiggerThanAverage(TreeSet<Integer> set){
         System.out.println("Liczby większe od średniej: ");
         for (Integer integer : set) {
             if (integer > getAverageValue(set)){
